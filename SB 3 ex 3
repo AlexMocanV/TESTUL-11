@@ -1,0 +1,22 @@
+#include <iostream>
+#include <fstream>
+std::string nume="bac.out";
+std::ofstream fout(nume);
+
+int main()
+{
+    int x,y;
+    std::cin>>x>>y;
+    int r=y-x;
+    fout<<y<<' '<<x<<' '; 
+    while(r!=0)
+    {
+        r-=2;
+        fout<<x-r<<' ';
+        y=x;
+        x-=r;
+    }
+    return 0;
+}
+Explicatie
+Am initializat si am citit variabile x si y dupa care am stocat in variabila r diferenta dintre y si x pentru a determina urmatoarele nr. am afisat nr y si x in ordine descrescatoare si am dezvoltat un algorithm in care aflu urmatorul nr din sir si il afisez  
