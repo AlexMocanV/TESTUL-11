@@ -1,0 +1,29 @@
+#include <iostream>
+
+int mat[21][21];
+
+int main()
+{
+    int n,k;
+    std::cin>>n>>k;
+    for(int i=1;i<=n;i++)
+    {
+        for(int j=1;j<=n;j++)
+        {
+            std::cin>>mat[i][j];
+        }
+    }
+    for(int i=1;i<k;i++)
+    {
+        std::swap(mat[i][k],mat[k][i]);
+    }
+    for(int i=1;i<=n;i++)
+    {
+        for(int j=1;j<=n;j++)
+        {
+            std::cout<<mat[i][j]<<" ";
+        }
+        std::cout<<'\n';
+    }
+    return 0;
+}
