@@ -1,0 +1,36 @@
+a) ****
+b) 1
+c) #include <iostream>
+
+int main()
+{
+    int n,m;
+    std::cin>>n>>m;
+    if(m>n)
+    {
+        int aux=n;
+        n=m;
+        m=aux;
+    }
+    if(m%2==0)
+    {
+        m++;
+    }
+    while(m<=n)
+    {
+        m+=2;
+        std::cout<<'*';
+    }
+    return 0;
+}
+d) citește m,n
+ (numere naturale)
+┌dacă m>n atunci
+│ n<-->m
+└■
+┌dacă m%2=0 atunci
+│ m<-m+1
+└■
+┌executa
+|  m<-m+1
+└■ pana cand m≤n
